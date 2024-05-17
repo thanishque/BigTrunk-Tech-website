@@ -1,0 +1,61 @@
+.about {
+    margin: 100px auto;
+    width: 90%;
+  }
+  
+  .about-top {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  
+  .about-top h1::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #000;
+    margin: 20px auto;
+  }
+  
+  .about-bottom {
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* Hide overflow to prevent scrollbar when description slides in */
+  }
+  
+  .about-floating-box {
+    position: relative;
+  }
+  
+  .about-img {
+    width: 50%;
+    border-radius: 40px;
+    cursor: pointer;
+  }
+  
+  .description {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Initially hidden */
+    width: 50%;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    transition: left 0.5s ease-in-out; /* Smooth transition */
+  }
+  
+  .about-bottom.show-description .description {
+    left: 50%; /* Show description when triggered */
+  }
+  
+  .description p {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .description ul {
+    padding-left: 20px;
+  }
+  
