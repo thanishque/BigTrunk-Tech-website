@@ -1,0 +1,101 @@
+/* AboutUs.css */
+.about {
+  margin: 100px auto;
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.about-top {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.about-top h1::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #000;
+  margin: 20px auto;
+}
+
+.about-top h3 {
+  font-size: 24px;
+  color: #34495e;
+}
+
+.about-top p {
+  font-size: 18px;
+  color: #7f8c8d;
+}
+
+.about-bottom {
+  display: flex;
+  flex-direction: column; /* Stack sections vertically */
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-floating-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px; /* Add margin between sections */
+  transition: transform 0.5s ease-in-out; /* Smooth transition for appearance */
+}
+
+.about-img {
+  width: 50%;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.about-img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.description {
+  position: absolute;
+  top: 0;
+  left: 100%; /* Initially hidden */
+  width: 50%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  transition: left 0.5s ease-in-out; /* Smooth transition */
+}
+
+.show-description .description {
+  left: 50%; /* Show description when triggered */
+}
+
+.description p {
+  font-size: 16px;
+  color: #333;
+  text-align: left; /* Align text to the left for better readability */
+}
+
+.description ul {
+  padding-left: 20px;
+  text-align: left; /* Align text to the left for better readability */
+}
+
+.description li {
+  margin-bottom: 5px; /* Add a little space between bullet point and text */
+}
+
+.about-floating-box.reverse {
+  flex-direction: row-reverse; /* Reverse the order of image and description */
+}
+
+.about-floating-box.reverse .description {
+  left: -100%; /* Initially hidden on the left */
+}
+
+.about-floating-box.reverse.show-description .description {
+  left: 0%; /* Show description when triggered */
+}
